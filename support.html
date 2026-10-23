@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clipr &mdash; Support</title>
+<style>
+  :root {
+    --ink: #060b13;
+    --mint: #51e0be;
+    --accent: #0a7f66;
+    --text: #1a1f26;
+    --muted: #5b6673;
+    --rule: #e3e8ee;
+    --card: #f6f8fa;
+    --bg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e8edf3;
+      --muted: #9aa8b8;
+      --rule: #232e3d;
+      --card: #101825;
+      --bg: #060b13;
+      --accent: #51e0be;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  header {
+    padding: 56px 0 28px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+  }
+  h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 1.2rem;
+    margin: 40px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .updated { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  .lede {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 18px 20px;
+    margin: 0 0 8px;
+  }
+  .lede p { margin: 0; }
+  .lede strong { color: var(--accent); }
+  ul { padding-left: 22px; }
+  li { margin: 7px 0; }
+  a { color: var(--accent); }
+  code {
+    background: var(--card);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+</style>
+<style>
+  .faq h2 { margin-top: 36px; }
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 0 0 8px;
+  }
+  .contact-card p { margin: 0 0 6px; }
+  .contact-card p:last-child { margin-bottom: 0; }
+  .contact-card a { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Clipr &mdash; Support</h1>
+  <p class="updated">Clipboard manager for iPhone</p>
+</header>
+
+<div class="contact-card">
+  <p><strong>Email <a href="mailto:support@voncer.com">support@voncer.com</a></strong></p>
+  <p>A person reads it. Tell us what you were doing and what happened instead
+  &mdash; and if something looks wrong on screen, a screenshot saves us both a
+  round trip.</p>
+</div>
+
+<div class="faq">
+
+<h2>Why does the Clipr keyboard need Full Access?</h2>
+<p>Because without it, iOS gives a third-party keyboard no way to reach the
+storage where your clips already live. Full Access is the only switch that
+lets the keyboard read Clipr's own container.</p>
+<p>It is not used for anything else. The keyboard does not record what you
+type, does not log keystrokes, and has no networking code to send anything
+anywhere. iOS never exposes secure fields such as passwords to third-party
+keyboards at all. The <a href="./">privacy policy</a> covers this in full.</p>
+<p>The keyboard is optional. Clipr works without it &mdash; you just copy from
+the app instead of inserting from the keyboard.</p>
+
+<h2>The keyboard says &ldquo;No saved clips yet&rdquo; but I have clips</h2>
+<p>Two causes, in order of likelihood:</p>
+<ul>
+  <li><strong>Full Access is off.</strong> Settings &rarr; General &rarr;
+  Keyboard &rarr; Keyboards &rarr; Clipr &rarr; Allow Full Access.</li>
+  <li><strong>An older build is still installed.</strong> If you ever ran a
+  TestFlight or development copy of Clipr, it may have left a second keyboard
+  with the same name pointing at its own empty storage. Delete the old app and
+  re-add the keyboard.</li>
+</ul>
+
+<h2>How do I add the keyboard?</h2>
+<p>Settings &rarr; General &rarr; Keyboard &rarr; Keyboards &rarr; Add New
+Keyboard &rarr; Clipr. Then tap Clipr in the list and turn on Allow Full
+Access. Clipr's Keyboard tab has a <strong>Set Up Keyboard</strong> button that opens
+the right screen for you.</p>
+
+<h2>What does Clipr Pro include?</h2>
+<p>Unlimited saved clips. The free version keeps five. Everything else &mdash;
+the keyboard, the Messages panel, folders, favourites, search, undo, export
+&mdash; works the same either way.</p>
+<p>Pro is a one-time purchase, not a subscription. There is no account to
+create and nothing recurring to cancel.</p>
+
+<h2>I paid for Pro but it is not showing</h2>
+<p>Open Clipr &rarr; Settings &rarr; <strong>Upgrade to Pro</strong>, then tap
+<strong>Restore Purchases</strong>. That asks the App Store directly, and it is the right fix
+after restoring a backup, switching phones, or signing in with a different
+Apple Account.</p>
+<p>Purchases are tied to the Apple Account that bought them. If you bought Pro
+on one account and are signed in with another, the restore will correctly find
+nothing &mdash; sign in with the original account and try again.</p>
+
+<h2>Where are my clips stored? Can I get them back?</h2>
+<p>On your iPhone, and nowhere else. Clipr has no server and no account, so
+there is no copy of your clips for us to recover.</p>
+<p>That also means <strong>deleting the app deletes your clips.</strong> Before
+you delete Clipr, or before switching phones, use Settings &rarr; <strong>Export All
+Clips</strong> to save a JSON backup somewhere you keep &mdash; Files, iCloud Drive, anywhere you
+choose. Settings &rarr; <strong>Import Backup</strong> reads it back in later.</p>
+
+<h2>Does Clipr watch my clipboard in the background?</h2>
+<p>No. It reads your clipboard at exactly one moment: when you tap the button
+asking it to save what you copied. iOS may show its own paste confirmation when
+that happens, which is the system telling you the truth about what is going on.</p>
+
+<h2>Face ID is not available</h2>
+<p>Clipr's optional lock uses whatever your iPhone already has set up. If
+Settings says biometric lock is unavailable, Face ID or Touch ID has not been
+enrolled on the device, or Clipr has been denied Face ID in iOS Settings
+&rarr; Clipr.</p>
+
+<h2>Something else, or a feature you want</h2>
+<p>Write to <a href="mailto:support@voncer.com">support@voncer.com</a>. Feature
+requests are read and genuinely do shape what gets built next.</p>
+
+</div>
+
+<footer>
+  Clipr is a local-first clipboard manager for iPhone, by Voncer LLC.
+  &middot; <a href="./">Privacy policy</a>
+</footer>
+
+</div>
+</body>
+</html>
